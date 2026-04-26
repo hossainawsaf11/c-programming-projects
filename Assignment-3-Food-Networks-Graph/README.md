@@ -1,44 +1,30 @@
-# Food Networks using Graphs and Recursion
+# Food Networks (Graphs + Recursion)
 
 ## Overview
-This project models ingredient relationships as a graph using an adjacency matrix. It analyzes how ingredients co-occur in recipes and uses recursive traversal to explore relationships and suggest substitutions.
+Developed a graph-based system to model ingredient relationships using an adjacency matrix and recursive traversal algorithms.
 
-## Graph Representation
+## Graph Model
 - Nodes: Ingredients
-- Edges: Frequency of co-occurrence in recipes
-- Structure: Adjacency matrix A[i][j]
-
-Each value represents how often two ingredients appear together.
+- Edges: Co-occurrence frequency
+- Representation: Adjacency matrix
 
 ## Core Functionality
 
-### Basic Operations
-- `print_ingredients()`
-  - Displays list of all ingredients
+### Graph Operations
+- Ingredient indexing and lookup
+- Direct neighbor identification
 
-- `ingredient_index(name)`
-  - Maps ingredient name to matrix index
+### Recursive Traversal
+- k-distance exploration (multi-hop relationships)
+- Depth-limited traversal
 
-### Graph Traversal
-- `related_ingredients(...)`
-  - Finds directly connected ingredients
-
-- `related_k_dist(...)`
-  - Recursively finds ingredients within k steps
-  - Explores graph depth-wise
-
-### Advanced Traversal
-- `related_with_restrictions(...)`
-  - Finds related ingredients while excluding certain nodes
-  - Avoids paths passing through restricted ingredients
+### Constraint-Based Search
+- Traversal avoiding restricted ingredients
+- Path filtering logic
 
 ### Application Logic
-- Ingredient substitution
-  - Suggests replacements based on graph relationships
-
-### Testing Strategy
-- Developed and validated using both small and large adjacency matrices
-- Verified recursive correctness through controlled test cases
+- Ingredient substitution based on graph connectivity
+- Exploration of alternative ingredient combinations
 
 ## Key Skills
-Graphs, adjacency matrices, recursion, depth-first traversal, search algorithms, algorithm design
+Graphs, recursion, adjacency matrices, search algorithms, algorithm design
