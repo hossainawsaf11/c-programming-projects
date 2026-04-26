@@ -1,59 +1,35 @@
-
-# Movie Review Database (Linked Lists in C)
+# Movie Review Database (Linked Lists)
 
 ## Overview
-This project implements a movie review database in C using custom compound data types and singly linked lists. The system stores, manages, and queries movie data, simulating a basic data management application.
+Implemented a dynamic movie review database in C using custom structs and singly linked lists to manage structured data and support query operations.
 
-## Data Structures
-- `CastList`: Linked list storing cast member name and salary
-- `MovieReview`: Struct storing title, studio, year, box office, score, and cast list
-- `ReviewNode`: Linked list node containing a MovieReview
+## System Design
+The system models:
+- Movies (title, studio, year, box office, score)
+- Cast members (name, salary)
+- Relationships using linked structures
 
 ## Core Functionality
 
+### Data Structure Implementation
+- Designed compound data types (`MovieReview`, `CastList`, `ReviewNode`)
+- Managed hierarchical relationships using nested linked lists
+
 ### Linked List Operations
-- `newMovieReviewNode(...)`
-  - Allocates memory and initializes a new movie review node
+- Insertion with duplicate detection
+- Deletion with proper memory cleanup
+- Traversal and aggregation
+- Full list deallocation
 
-- `insertMovieReview(...)`
-  - Inserts a new review at the head of the list
-  - Prevents duplicate entries using search
+### Query & Processing
+- Search by composite key (title, studio, year)
+- Filtering by studio and score thresholds
+- Aggregation of box office totals
 
-- `deleteMovieReview(...)`
-  - Removes a movie from the list and frees memory
-
-- `deleteReviewList(...)`
-  - Frees the entire linked list
-
-### Search & Query
-- `findMovieReview(...)`
-  - Searches list by title, studio, and year
-
-- `queryReviewsByStudio(...)`
-  - Filters and prints movies from a given studio
-
-- `queryReviewsByScore(...)`
-  - Returns movies above a given score threshold
-
-### Updates & Aggregation
-- `updateMovieReview(...)`
-  - Updates box office and score for a specific movie
-
-- `countReviews(...)`
-  - Counts total number of nodes in the list
-
-- `printMovieReviews(...)`
-  - Prints all reviews and returns total box office
-
-### Advanced Features
-- `sortReviewsByTitle(...)`
-  - Sorts linked list alphabetically
-
-- `insertCastMember(...)`
-  - Inserts cast members sorted by salary (descending)
-
-- `whosTheStar(...)`
-  - Computes average movie earnings per actor and identifies the top performer
+### Advanced Logic
+- Sorted linked list by title
+- Maintained cast list sorted by salary
+- Computed average earnings per actor (`whosTheStar`)
 
 ## Key Skills
-Linked lists, dynamic memory allocation, structs, pointer manipulation, data processing, algorithm design
+Linked lists, pointers, memory management, data modeling, algorithm design
