@@ -1,4 +1,4 @@
-# CSCA48 Data Structures & Algorithms in C
+# Data Structures & Algorithms in C
 
 This repository contains three core systems built in C as part of CSCA48 at the University of Toronto.
 
